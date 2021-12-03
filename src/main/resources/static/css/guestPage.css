@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+   min-height: 400vh;
+    background: url(https://images.pexels.com/photos/2217365/pexels-photo-2217365.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    overflow-x: hidden;
+}
+section{
+    position: relative;
+    right: -15px;
+    top:20px;
+    width: 98%;
+    min-height: 395vh;
+    padding: 100px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 10px;
+}
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title .logo{
+    position: relative;
+    top: -50px;
+    font-size: 2em;
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.title h6{
+    position: relative;
+    top: -50px;
+}
+.title .nav_img{
+    position: relative;
+    padding: 10px;
+    top: -50px;
+    height: 60px;
+    width: 50px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 50px 50px;
+    background: #000;
+}
+.title img{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    right: 2px;
+    filter: invert(1);
+
+}
+
+
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: space-between;
+    display: flex;
+}
+.banner .content{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-right: 100px;
+}
+
+.banner .content h1{
+    font-size: 4em;
+    color: #000;
+    line-height: 1em;
+    padding-bottom: 20px;
+}
+.banner .content .btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #000;
+    color: #fff;
+    height: 50px;
+    width: 200px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: 1s;
+}
+.banner .content ul{
+    display: flex;
+    padding-top: 70px;
+}
+.banner .content .btn:hover{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+}
+.banner .content ul li{
+    list-style: none;
+    margin-right: 50px;
+}
+.banner .content ul li a{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.25);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 10px;
+
+}
+.banner .content ul li a img{
+    height: 60%;
+    width: 60%;
+    transition: 1s;
+    /*margin-top: 5rem;*/
+}
+
+.banner .content ul li a:hover img{
+    transform: translateY(-15px);
+}
+.banner .ban_img img{
+    position: relative;
+    width: 40rem;
+    height: auto;
+    transition: 1s;
+    margin-top: -3rem;
+}
+.items{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:50px;
+}
+
+.items .box .like img{
+    position: relative;
+    margin-top: 80px;
+    height: 30px;
+    width: 30px;
+}
+.inner{
+    width: 100px;
+    height: 100px;
+    position: relative;
+
+}
+.items .box{
+
+    position: relative;
+    width: 310px;
+    height: 225px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 125px;
+    display: flex;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.25);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+.items .box .info h5{
+    font-size: 1.6em;
+    padding-top: 10px;
+    padding: 10px;
+}
+.items .box .info h6{
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px;
+    color: #333;
+}
+.items .box .info p{
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px;
+}
+.btcart{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #000;
+    color: #fff;
+    height: 50px;
+    width: 170px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: 1s;
+}
+.btcart:hover{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+}
+
+.items .box .imgBx img{
+    position: relative;;
+    margin: auto;
+    margin-top: -13rem;
+    margin-right: -20rem;
+    height: auto;
+    width: 150px;
+}

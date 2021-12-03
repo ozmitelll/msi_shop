@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>MSI Shop</title>
+    <link rel="stylesheet" type="text/css" href="/css/guestPage.css">
+    <script src="https://use.fontawesome.com/fad9b6e15e.js"></script>
+</head>
+<body>
+    <section>
+        <div class="title">
+            <div>
+                <a href="#" class="logo">Laptops</a>
+                <h6>MITIT</h6>
+            </div>
+            <a href="/listproduct" class="nav_img"><img src="img/shopping-cart.png"></a>
+        </div>
+
+        <div class="banner">
+            <div class="content">
+                <h1>Welcome to your
+                    <br>
+                new favourite Shop</h1>
+                <a href="#" class="btn">View Products</a>
+                <ul>
+                    <li><a class="inner" href="#"><img src="img/iphone.png"></a> </li>
+                    <li><a class="inner"href="#"><img src="img/notebook-computer.png"></a> </li>
+                    <li><a class="inner"href="#"><img src="img/computer.png"></a> </li>
+                    <li><a class="inner"href="#"><img src="img/headphones.png"></a> </li>
+                </ul>
+            </div>
+            <div class="ban_img">
+                <img src="img/pngfind.com-gaming-png-1183848.png" id="asus">
+            </div>
+        </div>
+        <div class="items" th:each="product : ${products}">
+            <div class="box">
+                <div class="imgBx">
+                    <img th:src="${product.pictureUrl}" id="item1" alt="dwad">
+                </div>
+                <div class="info">
+                    <h5 th:text="${product.name}"></h5>
+                    <h6 th:text="${product.description}"></h6>
+                    <p th:text="${product.price}">$</p>
+                    <form th:method="post" th:action="@{/addproduct}">
+                        <input type="hidden" name="product" th:value="${product.getId()}">
+                        <input class="btcart" type="submit" value="Add to cart">
+                    </form>
+                </div>
+                <div class="like">
+                    <img src="img/premium-icon-heart-4209081.png">
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
