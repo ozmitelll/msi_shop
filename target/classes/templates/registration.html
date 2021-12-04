@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="/css/registration.css">
-    <title th:text="${message}"></title>
+    <title>Registration</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                         <input type="email" placeholder="E-mail" name="email">
                     </div>
                     <div class="inputBox">
-                        <input type="submit" value="Create">
+                        <input type="submit" th:href="@{/activate/{code}}" value="Create">
                     </div>
                     <p class="forget">Do you have account ?
                         <a href="/login">Log in</a></p>

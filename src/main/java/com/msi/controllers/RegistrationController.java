@@ -1,12 +1,15 @@
 package com.msi.controllers;
 
+import com.msi.models.AuthentificationProvider;
 import com.msi.models.User;
 import com.msi.repositories.UserRepo;
 import com.msi.services.MailSender;
+import com.msi.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.thymeleaf.util.StringUtils;
@@ -17,6 +20,9 @@ import java.util.UUID;
 public class RegistrationController {
     @Autowired
     private UserRepo userRepo;
+    @Autowired
+    private UserService userService;
+
     @Autowired
     private MailSender mailSender;
 
@@ -35,6 +41,7 @@ public class RegistrationController {
             User user = new User(username, password, email);
             user.setActive(true);
             user.setActivationCode(UUID.randomUUID().toString());
+            user.setAuthentificationProvider(AuthentificationProvider.LOCAL);
             userRepo.save(user);
 
             if (!StringUtils.isEmpty(user.getEmail())) {
@@ -54,6 +61,18 @@ public class RegistrationController {
 
     }
 
+    @GetMapping("/acitvate/{code}")
+    public String activate(Model model, @PathVariable String code){
+        boolean isAcivated = userService.activateUser(code);
+
+        if(isAcivated){
+            System.out.println("activated!");
+        } else {
+            System.out.println("activation code not found");
+        }
+
+        return "login";
+    }
 
 
 }

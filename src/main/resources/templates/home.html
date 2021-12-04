@@ -13,11 +13,12 @@
                 <a href="#" class="logo">Laptops</a>
                 <h6>MITIT</h6>
             </div>
-            <a href="/listproduct" class="nav_img"><img src="img/shopping-cart.png"></a>
             <a href="/logout">Logout</a>
 
+            <a href="/listproduct" class="nav_img"><img src="img/shopping-cart.png"></a>
+        </div>
             <div class="banner">
-            <div class="content">
+                <div class="content">
                 <h1>Welcome to your
                     <br>
                 new favourite Shop</h1>
@@ -28,13 +29,12 @@
                     <li><a class="inner"href="#"><img src="img/computer.png"></a> </li>
                     <li><a class="inner"href="#"><img src="img/headphones.png"></a> </li>
                 </ul>
-            </div>
+                </div>
             <div class="ban_img">
                 <img src="img/pngfind.com-gaming-png-1183848.png" id="asus">
             </div>
-        </div>
-        <div class="items" th:each="product : ${products}">
-            <div class="box">
+            <div class="items" th:each="product : ${products}">
+                <div class="box">
                 <div class="imgBx">
                     <img th:src="${product.pictureUrl}" id="item1" alt="dwad">
                 </div>
