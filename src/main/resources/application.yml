@@ -1,0 +1,20 @@
+server:
+  port: 8086
+
+
+spring:
+  datasource:
+    password: 123456
+    url: jdbc:postgresql://localhost/msi
+    username: postgres
+    hikari:
+      auto-commit: false
+  jpa:
+    generate-ddl: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 552727584576-d1k4beo4461g852a7fjsi30aniofgq8j.apps.googleusercontent.com
+            client-secret: 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

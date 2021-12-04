@@ -38,6 +38,10 @@ public class User implements UserDetails {
 
     private boolean isActive;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "auth_provider")
+    private AuthentificationProvider authentificationProvider;
+
     public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
@@ -45,6 +49,14 @@ public class User implements UserDetails {
     }
 
     public User() {
+    }
+
+    public AuthentificationProvider getAuthentificationProvider() {
+        return authentificationProvider;
+    }
+
+    public void setAuthentificationProvider(AuthentificationProvider authentificationProvider) {
+        this.authentificationProvider = authentificationProvider;
     }
 
     public Long getId() {
