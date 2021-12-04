@@ -11,6 +11,14 @@ spring:
       auto-commit: false
   jpa:
     generate-ddl: true
+
+  mail:
+    host: localhost
+    port: 1025
+    username: hello
+    password: hello
+    protocol: smtp
+
   security:
     oauth2:
       client:
@@ -18,3 +26,4 @@ spring:
           google:
             client-id: 552727584576-d1k4beo4461g852a7fjsi30aniofgq8j.apps.googleusercontent.com
             client-secret: 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
+

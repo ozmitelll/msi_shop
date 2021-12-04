@@ -40,7 +40,9 @@ public class User implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "auth_provider")
-    private AuthentificationProvider authentificationProvider;
+    private AuthentificationProvider authentificationProvider; //Role authorization
+
+    private String activationCode; //Activation code
 
     public User(String username, String password, String email) {
         this.username = username;
@@ -49,6 +51,15 @@ public class User implements UserDetails {
     }
 
     public User() {
+    }
+
+
+    public String getActivationCode() {
+        return activationCode;
+    }
+
+    public void setActivationCode(String activationCode) {
+        this.activationCode = activationCode;
     }
 
     public AuthentificationProvider getAuthentificationProvider() {
