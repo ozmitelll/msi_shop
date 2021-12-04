@@ -31,7 +31,7 @@ public class RegistrationController {
             userRepo.save(user);
             return "redirect:/login";
         } else{
-            model.addAttribute("message", "This user is have in DB");
+          //  model.addAttribute("message", "This user is have in DB");
             return "registration";
         }
     }
